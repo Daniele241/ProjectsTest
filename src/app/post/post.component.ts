@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Http} from '@angular/http';
+
 import { PostModel } from '../../model/post.model';
 
 let url = "http://localhost:3000/posts";
@@ -12,7 +13,7 @@ let url = "http://localhost:3000/posts";
 export class PostComponent implements OnInit {
   image: string;
   text: string;
-  datePost = new Date().toString();
+  datePost = new Date();
 
   constructor(private http: Http) { }
 

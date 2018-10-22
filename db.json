@@ -1,14 +1,16 @@
 {
     "posts": [
         {
+            "id": 1,
             "image": "Hello World!",
             "text": "Hello World",
-            "datePost": 1
+            "datePost": "24/01/1997"
         },
         {
+            "id": 2,
             "image": "I am Groot",
             "text": "I am Groot",
-            "datePost": 1
+            "datePost": "24/01/1997"
         }
     ]
 }
