@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {Http} from '@angular/http';
+import { PostModel } from '../../model/post.model';
+
+let url = "http://localhost:3000/posts";
 
 @Component({
   selector: 'app-post',
@@ -6,10 +10,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./post.component.scss']
 })
 export class PostComponent implements OnInit {
-  text: string;
   image: string;
+  text: string;
+  datePost = new Date().toString();
 
-  constructor() { }
+  constructor(private http: Http) { }
 
   ngOnInit() {
   }
@@ -25,6 +30,15 @@ export class PostComponent implements OnInit {
   }
 
   onClickButton() {
-    
+    this.postInfo();
+  }
+
+  postInfo() {
+    let post = new PostModel(this.image, this.text, this.datePost)
+    this.http.post(url,post)
+    .subscribe(
+      (response) => console.log(response),
+      (error) => console.log(error)
+    )
   }
 }

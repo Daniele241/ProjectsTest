@@ -14,8 +14,6 @@ export class PostListComponent implements OnInit {
   ngOnInit() {
     this.getAll();
   } 
-
-  
   
   getAll() {
     this.http.get('http://localhost:3000/posts')
