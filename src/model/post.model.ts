@@ -4,9 +4,9 @@ export class PostModel {
     text: string;
     datePost: Date;
 
-    constructor(image: string, text: string, datePost: string) {
-        this.image,
-        this.text,
-        this.datePost
+    constructor(image: string, text: string, datePost: Date) {
+        this.image = image,
+        this.text = text,
+        this.datePost = datePost;
     }
 }
