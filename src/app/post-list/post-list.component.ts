@@ -9,6 +9,8 @@ import { Http } from '@angular/http';
 })
 export class PostListComponent implements OnInit {
 
+  items: any;
+
   constructor(private http: Http) { }
 
   ngOnInit() {
@@ -16,7 +18,7 @@ export class PostListComponent implements OnInit {
   } 
   
   getAll() {
-    this.http.get('http://localhost:3000/posts')
+    this.items = this.http.get('http://localhost:3000/posts')
       .subscribe(result => console.log(result));
   }
 }

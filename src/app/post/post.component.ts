@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Http} from '@angular/http';
 
 import { PostModel } from '../../model/post.model';
+import { Route } from '@angular/router';
 
 let url = "http://localhost:3000/posts";
 
