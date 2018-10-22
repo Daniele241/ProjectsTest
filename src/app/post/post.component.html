@@ -1,0 +1,26 @@
+<div class="card" style="width: 40rem; margin-top: 40px; margin: 2% auto">
+    <div class="card-body">
+      <input 
+        type="file" 
+        name="file" 
+        #file
+        (change)="onChangedFile($event)"> <br> <br>
+
+      <input 
+        type="text" 
+        class="form-control" 
+        placeholder="Inserisci un testo" 
+        (change)="onChangedText($event)"> <br>
+
+      <div style="text-align: left;">
+        <i class="fas fa-paperclip"></i>
+        <a href="#">Attach a link</a>
+      </div>
+
+      <div style="text-align: right;">
+        <i class="fas fa-envelope"></i>
+        <i class="fab fa-tumblr"></i>
+        <button type="button" class="btn btn-primary" (click)="onClickButton($event)">Share</button>
+      </div>
+    </div>
+  </div>

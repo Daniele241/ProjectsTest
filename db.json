@@ -1,0 +1,14 @@
+{
+    "posts": [
+        {
+            "image": "Hello World!",
+            "text": "Hello World",
+            "datePost": 1
+        },
+        {
+            "image": "I am Groot",
+            "text": "I am Groot",
+            "datePost": 1
+        }
+    ]
+}
